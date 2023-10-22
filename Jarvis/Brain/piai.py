@@ -11,7 +11,7 @@ import pathlib
 warnings.simplefilter("ignore")
 url = "https://pi.ai/talk"
 scriptDirectory = pathlib.Path().absolute()
-chrome_driver_path = 'Brain\\chromedriver.exe'
+chrome_driver_path = 'chromedriver.exe'
 chrome_options = Options()
 chrome_options.add_argument("--headless=new")
 chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
@@ -19,7 +19,7 @@ chrome_options.add_argument('--log-level=3')
 service = Service(chrome_driver_path)
 user_agent = 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.2 (KHTML, like Gecko) Chrome/22.0.1216.0 Safari/537.2'
 chrome_options.add_argument(f'user-agent={user_agent}')
-driver = webdriver.Chrome(service=service, options=chrome_options)
+driver = webdriver.Chrome( options=chrome_options)
 driver.maximize_window()
 driver.get(url)
 sleep(5)

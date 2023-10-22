@@ -31,7 +31,7 @@ url = "https://flowgpt.com/chat"
 
 # Get the absolute path of the current directory and set the path to the Chrome driver executable
 scriptDirectory = pathlib.Path().absolute()
-chrome_driver_path = 'chromedriver.exe'
+chrome_driver_path = '/home/om012/ai/Science-Exhibition/Jarvis/Brain/chromedriver'
 
 # Configure Chrome options
 chrome_options = Options()
@@ -46,7 +46,7 @@ user_agent = 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.2 (KHTML, like Gecko)
 chrome_options.add_argument(f'user-agent={user_agent}')
 
 # Create a Chrome webdriver instance with the specified options
-driver = webdriver.Chrome(service=service, options=chrome_options)
+driver = webdriver.Chrome(options=chrome_options)
 
 # Maximize the Chrome window and navigate to the specified URL
 driver.maximize_window()
